@@ -31,6 +31,7 @@ namespace SistemaHotel.Cadastros
             grid.Columns[1].HeaderText = "Cargo";
 
             grid.Columns[0].Visible = false;
+           
 
             grid.Columns[1].Width = 200;
         }
@@ -47,8 +48,8 @@ namespace SistemaHotel.Cadastros
             da.Fill(dt);
             grid.DataSource = dt;
             con.FecharCon();
-
             FormatarDG();
+
         }
 
         private void BtnNovo_Click(object sender, EventArgs e)
@@ -158,6 +159,18 @@ namespace SistemaHotel.Cadastros
 
             id = grid.CurrentRow.Cells[0].Value.ToString();
             txtNome.Text = grid.CurrentRow.Cells[1].Value.ToString();
+            ///MessageBox.Show(id);
+        }
+
+        private void grid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //btnEditar.Enabled = true;
+            //btnExcluir.Enabled = true;
+            //btnSalvar.Enabled = false;
+
+            //id = grid.CurrentRow.Cells[0].Value.ToString();
+           //MessageBox.Show(id);
+
 
         }
     }

@@ -46,11 +46,7 @@ namespace SistemaHotel
             }
         }
 
-
-        
-        
+        //DECLARAÇÃO DE OUTRAS VARIAVEIS
 
     }
-
-
 }
